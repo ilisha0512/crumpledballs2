@@ -11,11 +11,6 @@ var dbside2;
 var dbside3;
 var dbimage;
 
-function preload()
-{
- dbimage = loadImage("sprites/dustbingreen.png");
-}
-
 function setup() {
 	createCanvas(800, 700);
 
@@ -26,9 +21,9 @@ function setup() {
 	//Create the Bodies Here.
 	paperball = new paper (100,200,30,30);
 	groundline = new ground(400,680,800,10);
-	dbside1 = new dustbin(450,670,10,50);
-	dbside2 = new dustbin(475, 675, 50,10);
-  dbside3 = new dustbin (500,670,10,50)
+	//dbside1 = new dustbin(450,670,10,50);
+	//dbside2 = new dustbin(475, 675, 50,10);
+  //dbside3 = new dustbin (500,670,10,50)
   dbimage = new dustbin (475, 673, 100,100);
 	Engine.run(engine);
   
@@ -37,12 +32,12 @@ function setup() {
 
 function draw() {
   rectMode(CENTER);
-  background(0);
+  background(255);
   paperball.display();
   groundline.display();
-  dbside1.display();
-  dbside2.display();
-  dbside3.display();
+  //dbside1.display();
+  //dbside2.display();
+  //dbside3.display();
   dbimage.display();
   keyPressed();
   drawSprites();

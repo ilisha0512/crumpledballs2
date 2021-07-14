@@ -9,6 +9,7 @@ class paper {
         this.body = Bodies.rectangle (x,y,width,height, options);
         this.width = width;
         this.height = height;
+        this.image = loadImage("paper.png")
         World.add (world, this.body);
     }
     display () {
@@ -22,8 +23,8 @@ class paper {
         fill("Magenta");
         strokeWeight(4);
         stroke("White");
-        ellipseMode();
-        ellipse(0, 0, this.width, this.height);
+        imageMode();
+        image(this.image, 0, 0, this.width, this.height);
         pop()
     }
 }
